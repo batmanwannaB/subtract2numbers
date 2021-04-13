@@ -1,11 +1,12 @@
 
-name := "subtract2nmbers"
+name := "subtract2numbers"
 version := "0.0.1"
 scalaVersion := "2.13.5"
 crossPaths := false
 organization:="com.github.batmanwannab"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
-publishTo := sonatypePublishToBundle.value
+publishTo := sonatypePublishTo.value
+sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
 developers := List(
   Developer(
     id = "TEAM",
