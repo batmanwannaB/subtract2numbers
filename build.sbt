@@ -1,14 +1,11 @@
 
-name := "subtract2numbers"
+name := "subtract2nmbers"
 version := "0.0.1"
 scalaVersion := "2.13.5"
 crossPaths := false
 organization:="com.github.batmanwannab"
-publishTo := {
-  val nexus = "https://so1.oss.sonatype.org/"
-  if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
-  else Some("releases" at nexus + "service/local/staging/deploy/maven2")
-}
+publishTo := sonatypePublishToBundle.value
+sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
 developers := List(
   Developer(
     id = "TEAM",
