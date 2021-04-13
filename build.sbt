@@ -1,6 +1,6 @@
 
 name := "subtract2numbers"
-version := "0.0.1"
+version := "0.0.3"
 scalaVersion := "2.13.5"
 organization:="com.github.batmanwannab"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
@@ -24,5 +24,5 @@ pomExtra :=
     </scm>
 licenses := Seq(
   "Apache-2.0" -> url("http://opensource.org/licenses/Apache-2.0")
-) 
+)
 
