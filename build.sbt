@@ -6,7 +6,6 @@ crossPaths := false
 organization:="com.github.batmanwannab"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
 publishTo := sonatypePublishToBundle.value
-sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
 developers := List(
   Developer(
     id = "TEAM",
@@ -26,3 +25,4 @@ pomExtra :=
 licenses := Seq(
   "Apache-2.0" -> url("http://opensource.org/licenses/Apache-2.0")
 ) 
+
