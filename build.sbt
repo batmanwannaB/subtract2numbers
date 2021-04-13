@@ -2,7 +2,6 @@
 name := "subtract2numbers"
 version := "0.0.1"
 scalaVersion := "2.13.5"
-crossPaths := false
 organization:="com.github.batmanwannab"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
 publishTo := sonatypePublishToBundle.value
