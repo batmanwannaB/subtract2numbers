@@ -5,7 +5,7 @@ scalaVersion := "2.13.5"
 crossPaths := false
 organization:="com.github.batmanwannab"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
-publishTo := sonatypePublishTo.value
+publishTo := sonatypePublishToBundle.value
 sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
 developers := List(
   Developer(
