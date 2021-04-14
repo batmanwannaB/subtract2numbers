@@ -21,6 +21,7 @@ developers := List(
     url = url("https://github.com/batmanwannab/subtract2numbers")
   )
 )
+usePgpKeyHex(System.getenv("GPG_PUBLIC_KEY"))
 publishMavenStyle := true
 pomIncludeRepository := { _ =>
   false
