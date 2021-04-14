@@ -1,16 +1,20 @@
 
 name := "subtract2numbers"
-version := "0.0.3"
+version := "0.0."
 scalaVersion := "2.13.5"
 organization:="com.github.batmanwannab"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
-publishTo := sonatypePublishToBundle.value
+publishTo := {
+  val nexus = "https://s01.oss.sonatype.org/"
+  if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
+  else Some("releases" at nexus + "service/local/staging/deploy/maven2")
+}
 sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
 developers := List(
   Developer(
     id = "TEAM",
     name = "TaAM",
-    email = "praveshsk10@gmail.com",
+    email = "pravxxxexxx0@gmail.com",
     url = url("https://github.com/batmanwannab/subtract2numbers")
   )
 )
