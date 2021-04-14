@@ -1,6 +1,5 @@
 
 name := "subtract2numbers"
-version := "0.0."
 scalaVersion := "2.13.5"
 organization:="com.github.batmanwannab"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
@@ -9,6 +8,10 @@ publishTo := {
   if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
   else Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
+credentials += Credentials("Sonatype Nexus Repository Manager",
+  "s01.oss.sonatype.org",
+  System.getenv("SONATYPE_USERNAME"),
+  System.getenv("SONATYPE_PASSWORD"))
 sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
 developers := List(
   Developer(
@@ -19,6 +22,9 @@ developers := List(
   )
 )
 publishMavenStyle := true
+pomIncludeRepository := { _ =>
+  false
+}
 crossPaths := false
 pomExtra :=
   <url>https://github.com/batmanwannab/subtract2numbers</url>

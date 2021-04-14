@@ -2,6 +2,6 @@ package com.github.batmanwannab
 
 class Subtract {
   def subtract( a:Int, b:Int) :Int={
-    return a-b
+    return b-a
   }
 }
