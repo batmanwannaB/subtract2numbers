@@ -17,38 +17,6 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Gen Key
-        env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-          GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
-        run: gpg --gen-key
-
-      - name: Recv Key
-        env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-          GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
-        run: gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys ${env:GPG_PUBLIC_KEY}
-
-      - name: List Key
-        env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-          GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
-        run: gpg --list-keys
-
-      - name: List Secret
-        env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
-          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-          GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
-        run: gpg --list-secret-keys
-
       - name: SBT Publish and Release to Sonatype
         env:
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
